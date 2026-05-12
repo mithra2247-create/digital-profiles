@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Profile</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:25px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:black;
+    position:fixed;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff3b3b;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff3b3b;
+}
+
+/* HOME SECTION */
+
+#home{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 80px 50px;
+}
+
+.main{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+/* LEFT IMAGE */
+
+.left{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.circle{
+    width:420px;
+    height:420px;
+    background:#ff1e1e;
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+}
+
+.profile-img{
+    width:400px;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    position:relative;
+    z-index:2;
+}
+
+/* RIGHT SIDE */
+
+.right{
+    flex:1;
+}
+
+.right h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.right h1 span{
+    color:#ff3b3b;
+}
+
+.right h2{
+    font-size:38px;
+    color:#ff3b3b;
+    margin-bottom:15px;
+}
+
+.right p{
+    font-size:18px;
+    line-height:1.7;
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+/* SOCIAL ICONS */
+
+.socials{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.socials a{
+    width:45px;
+    height:45px;
+    border:2px solid #ff3b3b;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ff3b3b;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    background:#ff3b3b;
+    color:white;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    border:2px solid #ff3b3b;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff3b3b;
+}
+
+/* COMMON SECTION */
+
+.section{
+    min-height:100vh;
+    padding:120px 80px;
+}
+
+.section-title{
+    font-size:50px;
+    color:#ff3b3b;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.box{
+    width:300px;
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #ff3b3b;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+.box h2{
+    margin-bottom:15px;
+    color:#ff3b3b;
+}
+
+.box p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .main{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .circle{
+        width:300px;
+        height:300px;
+    }
+
+    .profile-img{
+        width:280px;
+        height:380px;
+    }
+
+    .right h1{
+        font-size:45px;
+    }
+
+    .right h2{
+        font-size:28px;
+    }
+
+    .socials{
+        justify-content:center;
+    }
+
+    .section{
+        padding:120px 30px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Digital Profile</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home">
+
+<div class="main">
+
+<div class="left">
+
+<div class="circle"></div>
+
+<img src="your-image.jpg" class="profile-img">
+
+</div>
+
+<div class="right">
+
+<h1>Hi, It's <span>Sangamithra</span></h1>
+
+<h2>I'm a Web Designer</h2>
+
+<p>
+I create modern and attractive websites using HTML and CSS.
+This is my personal digital profile website.
+</p>
+
+<div class="socials">
+
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+<a href="#"><i class="fa-brands fa-github"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+</div>
+
+<a href="#" class="btn">Hire Me</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="section">
+
+<h1 class="section-title">My Skills</h1>
+
+<div class="box-container">
+
+<div class="box">
+<h2>HTML</h2>
+<p>I can create website structure using HTML.</p>
+</div>
+
+<div class="box">
+<h2>CSS</h2>
+<p>I can design modern responsive websites.</p>
+</div>
+
+<div class="box">
+<h2>JavaScript</h2>
+<p>I can add animations and interactions.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="section">
+
+<h1 class="section-title">Education</h1>
+
+<div class="box-container">
+
+<div class="box">
+<h2>B.Sc Computer Science</h2>
+<p>M.V. Muthiah government Arts College</p>
+</div>
+
+<div class="box">
+<h2>Web Design Course</h2>
+<p>Completed HTML & CSS Training.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience" class="section">
+
+<h1 class="section-title">Experience</h1>
+
+<div class="box-container">
+
+<div class="box">
+<h2>Portfolio Website</h2>
+<p>Created responsive personal websites.</p>
+</div>
+
+<div class="box">
+<h2>Internship</h2>
+<p>Worked on Naan Mudhalvan Internship colud Infrastructure.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section">
+
+<h1 class="section-title">Contact Me</h1>
+
+<div class="box-container">
+
+<div class="box">
+<h2>Email</h2>
+<p>sangamithra@gmail.com</p>
+</div>
+
+<div class="box">
+<h2>Phone</h2>
+<p>6369113817</p>
+</div>
+
+<div class="box">
+<h2>Location</h2>
+<p>Dindigul,Tamil Nadu, India</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

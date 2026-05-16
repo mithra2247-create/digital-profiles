@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,7 +24,7 @@ html{
 }
 
 body{
-    background:#0a0a0a;
+    background:#000;
     color:white;
 }
 
@@ -35,22 +36,23 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:black;
+    background:#050505;
     position:fixed;
     top:0;
     z-index:1000;
+    border-bottom:2px solid red;
 }
 
 .logo{
     font-size:32px;
     font-weight:bold;
-    color:#ff3b3b;
+    color:red;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:20px;
+    gap:25px;
 }
 
 nav ul li a{
@@ -61,106 +63,77 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color:#ff3b3b;
+    color:red;
 }
 
-/* HOME SECTION */
+/* HOME */
 
 #home{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:120px 80px 50px;
+    padding:140px 80px 80px;
+    text-align:center;
 }
 
 .main{
     width:100%;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-/* LEFT IMAGE */
-
-.left{
-    flex:1;
-    display:flex;
     justify-content:center;
-    position:relative;
 }
-
-.circle{
-    width:420px;
-    height:420px;
-    background:#ff1e1e;
-    border-radius:50%;
-    position:absolute;
-    top:20px;
-}
-
-.profile-img{
-    width:400px;
-    height:500px;
-    object-fit:cover;
-    border-radius:20px;
-    position:relative;
-    z-index:2;
-}
-
-/* RIGHT SIDE */
 
 .right{
-    flex:1;
+    max-width:700px;
 }
 
 .right h1{
-    font-size:60px;
+    font-size:65px;
     margin-bottom:10px;
 }
 
 .right h1 span{
-    color:#ff3b3b;
+    color:red;
 }
 
 .right h2{
-    font-size:38px;
-    color:#ff3b3b;
-    margin-bottom:15px;
+    font-size:35px;
+    color:red;
+    margin-bottom:20px;
 }
 
 .right p{
     font-size:18px;
     line-height:1.7;
     color:#ccc;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-/* SOCIAL ICONS */
+/* SOCIALS */
 
 .socials{
     display:flex;
+    justify-content:center;
     gap:15px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .socials a{
     width:45px;
     height:45px;
-    border:2px solid #ff3b3b;
+    border:2px solid red;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#ff3b3b;
+    color:red;
     text-decoration:none;
     transition:0.3s;
 }
 
 .socials a:hover{
-    background:#ff3b3b;
+    background:red;
     color:white;
 }
 
@@ -169,7 +142,7 @@ nav ul li a:hover{
 .btn{
     display:inline-block;
     padding:14px 35px;
-    border:2px solid #ff3b3b;
+    border:2px solid red;
     border-radius:30px;
     text-decoration:none;
     color:white;
@@ -177,10 +150,10 @@ nav ul li a:hover{
 }
 
 .btn:hover{
-    background:#ff3b3b;
+    background:red;
 }
 
-/* COMMON SECTION */
+/* SECTIONS */
 
 .section{
     min-height:100vh;
@@ -189,34 +162,38 @@ nav ul li a:hover{
 
 .section-title{
     font-size:50px;
-    color:#ff3b3b;
-    margin-bottom:40px;
+    color:red;
+    margin-bottom:50px;
     text-align:center;
 }
 
+/* BOXES */
+
 .box-container{
     display:flex;
+    justify-content:center;
     flex-wrap:wrap;
     gap:25px;
-    justify-content:center;
 }
 
 .box{
     width:300px;
-    background:#111;
+    background:#0d0d0d;
+    border:1px solid red;
     padding:30px;
     border-radius:20px;
-    border:1px solid #ff3b3b;
     transition:0.3s;
+    box-shadow:0 0 15px rgba(255,0,0,0.3);
 }
 
 .box:hover{
     transform:translateY(-10px);
+    box-shadow:0 0 30px red;
 }
 
 .box h2{
+    color:red;
     margin-bottom:15px;
-    color:#ff3b3b;
 }
 
 .box p{
@@ -224,55 +201,51 @@ nav ul li a:hover{
     line-height:1.6;
 }
 
+/* DESIGN IMAGE */
+
+.design-image{
+    width:100%;
+    border-radius:20px;
+    border:2px solid red;
+    transition:0.3s;
+}
+
+.design-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 25px red;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
 
-    nav{
-        padding:20px;
-        flex-direction:column;
-        gap:20px;
-    }
+nav{
+    padding:20px;
+    flex-direction:column;
+    gap:20px;
+}
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
-    .main{
-        flex-direction:column;
-        text-align:center;
-    }
+.right h1{
+    font-size:45px;
+}
 
-    .circle{
-        width:300px;
-        height:300px;
-    }
+.right h2{
+    font-size:28px;
+}
 
-    .profile-img{
-        width:280px;
-        height:380px;
-    }
-
-    .right h1{
-        font-size:45px;
-    }
-
-    .right h2{
-        font-size:28px;
-    }
-
-    .socials{
-        justify-content:center;
-    }
-
-    .section{
-        padding:120px 30px;
-    }
+.section{
+    padding:120px 25px;
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -284,11 +257,19 @@ nav ul li a:hover{
 <div class="logo">Digital Profile</div>
 
 <ul>
+
 <li><a href="#home">Home</a></li>
+
 <li><a href="#skills">Skills</a></li>
+
 <li><a href="#education">Education</a></li>
+
 <li><a href="#experience">Experience</a></li>
+
+<li><a href="#design">Design</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
@@ -299,34 +280,25 @@ nav ul li a:hover{
 
 <div class="main">
 
-<div class="left">
-
-<div class="circle"></div>
-
-<img src="your-image.jpg" class="profile-img">
-
-</div>
-
 <div class="right">
 
 <h1>Hi, It's <span>Sangamithra</span></h1>
 
-<h2>I'm a Web Designer</h2>
+<h2>Web Designer</h2>
 
 <p>
-I create modern and attractive websites using HTML and CSS.
-This is my personal digital profile website.
+I create modern and responsive websites using HTML and CSS. This is my personal digital profile website.
 </p>
 
 <div class="socials">
-
-<a href="#"><i class="fa-brands fa-youtube"></i></a>
 
 <a href="#"><i class="fa-brands fa-github"></i></a>
 
 <a href="#"><i class="fa-brands fa-instagram"></i></a>
 
-<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
 
 </div>
 
@@ -342,23 +314,28 @@ This is my personal digital profile website.
 
 <section id="skills" class="section">
 
-<h1 class="section-title">My Skills</h1>
+<h1 class="section-title">Skills</h1>
 
 <div class="box-container">
 
 <div class="box">
 <h2>HTML</h2>
-<p>I can create website structure using HTML.</p>
+<p>Create website structure using HTML.</p>
 </div>
 
 <div class="box">
 <h2>CSS</h2>
-<p>I can design modern responsive websites.</p>
+<p>Design responsive and attractive websites.</p>
 </div>
 
 <div class="box">
-<h2>JavaScript</h2>
-<p>I can add animations and interactions.</p>
+<h2>MS Office</h2>
+<p>Proficient in Microsoft Office tools including Word, Excel, and PowerPoint.</p>
+</div>
+
+<div class="box">
+<h2>PHP</h2>
+<p>Basic knowledge of PHP for developing dynamic websites.</p>
 </div>
 
 </div>
@@ -375,12 +352,12 @@ This is my personal digital profile website.
 
 <div class="box">
 <h2>B.Sc Computer Science</h2>
-<p>M.V. Muthiah government Arts College</p>
+<p>M.V. Muthiah Government Arts College</p>
 </div>
 
 <div class="box">
 <h2>Web Design Course</h2>
-<p>Completed HTML & CSS Training.</p>
+<p>Completed HTML & CSS course.</p>
 </div>
 
 </div>
@@ -397,12 +374,34 @@ This is my personal digital profile website.
 
 <div class="box">
 <h2>Portfolio Website</h2>
-<p>Created responsive personal websites.</p>
+<p>Created responsive personal portfolio websites.</p>
 </div>
 
 <div class="box">
 <h2>Internship</h2>
-<p>Worked on Naan Mudhalvan Internship colud Infrastructure.</p>
+<p>Naan Mudhalvan Cloud Infrastructure Internship.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- DESIGN -->
+
+<section id="design" class="section">
+
+<h1 class="section-title">Design</h1>
+
+<div class="box-container">
+
+<div class="box" style="width:700px;">
+
+<a href="design.jpg" target="_blank">
+
+<img src="design.jpg" class="design-image">
+
+</a>
+
 </div>
 
 </div>
@@ -413,7 +412,7 @@ This is my personal digital profile website.
 
 <section id="contact" class="section">
 
-<h1 class="section-title">Contact Me</h1>
+<h1 class="section-title">Contact</h1>
 
 <div class="box-container">
 
@@ -429,7 +428,7 @@ This is my personal digital profile website.
 
 <div class="box">
 <h2>Location</h2>
-<p>Dindigul,Tamil Nadu, India</p>
+<p>Dindigul, Tamil Nadu, India</p>
 </div>
 
 </div>
